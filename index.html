@@ -13,12 +13,14 @@
             -webkit-font-smoothing: antialiased;
             font-family: Helvetica Neue, Helvetica, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
             background-image: url("./background.jpg");
-            font-size: 85%;
+            background-size: cover;
+            font-size: 100%; /* 将body的字体大小调整为100% */
             margin: 0;
+            color: white; /* 设置字体颜色为白色 */
         }
         
         h2 {
-            font-size: 220%;
+            font-size: 300%; /* 调整h2的字体大小 */
             font-weight: 400;
         }
         
@@ -31,13 +33,13 @@
         }
         
         .timer {
-            font-size: 180%;
+            font-size: 250%; /* 调整timer的字体大小 */
             line-height: 1.5;
             margin: 1em 0;
         }
         
         .timer b {
-            color: rgb(253, 99, 125);
+            color: rgb(253, 99, 125); /* 高亮部分的颜色保持不变 */
         }
     </style>
 </head>
@@ -52,9 +54,9 @@
 
     <script>
         function timer() {
-          window.setTimeout("show_date_time()", 1000);
-          var start = new Date("2023-12-17 01:21:00").getTime(); // 2015.7.2
-          var t = new Date().getTime() - start; 
+            window.setTimeout("show_date_time()", 1000);
+            var start = new Date("2023-12-17 01:21:00").getTime(); // 2023.12.17
+            var t = new Date().getTime() - start; 
             var h = ~~(t / 1000 / 60 / 60 % 24);
             if (h < 10) {
                 h = "0" + h;
